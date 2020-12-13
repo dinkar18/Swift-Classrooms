@@ -121,5 +121,86 @@ findLargest(arr: [4,50,3])
 
 //ASSIGEMENT
 
+
+
+
 //99 bottle of bear on the wall,99 bottle of bear.
 //Take one down and pass it around, 98 bootle of bear on wall
+
+
+
+//for count in (1...99).reversed(){
+//print ("\(count) bottle of bear on the wall,\(count) bottle of bear. Take one down and pass it around,")
+//}
+
+
+
+
+
+//6th september
+
+
+/////function
+
+    func beerSong ()->String{
+        var lyrics:String = ""
+        for number in (1...99).reversed(){
+            let newline = "\n\(number) bottles of beer on the wall, \(number) bottles of bear. \n Take no one down  pass it around, \(number-1) bottles of beer on the wall."
+            lyrics += newline
+        }
+        lyrics += "No more bottles of beer on the wall, no more bottles of bear. Go to the store ad buy some more, 99 bottles of beer on the wall."
+        return lyrics
+}
+print(beerSong())
+
+
+
+/////Love calculator
+
+
+func loveCalculator (yourName : String, partnerName : String) -> String {
+    
+    let loveScore = arc4random_uniform(101);
+    
+    if (loveScore > 80) {
+        return "Your love score is \(loveScore).  You are madly in love with each other but please stop fighting "
+    }
+        
+    else if (loveScore > 40 && loveScore <= 80) {
+        return "Your love score is \(loveScore). \(yourName) and \(partnerName) Wow !! you are trying to be together but berra gark pyaar ka"
+        
+    }
+        
+    else{
+        return "Your love score is \(loveScore). \(yourName) and \(partnerName) No love possible, you are not meant for each other. you people are meant for gol gappe only"
+    }
+    
+}
+
+print(loveCalculator(yourName: "Mir Mohommad", partnerName: "tinkle patel"))
+
+
+
+///BMI
+
+func bmiCalculator (weight : Float, height : Float) -> String {
+    //bmi weight / pow(height,2)
+    let bmiScore = weight/(height*height);
+    var displaybmi = String (format : "%.2f" ,bmiScore)
+    if (bmiScore > 25) {
+        return "Your BMI score is \(displaybmi). Oops!!! You are overweight"
+    }
+        
+    else if (bmiScore > 18 && bmiScore <= 25) {
+        return "Your BMI score is \(displaybmi). Waohh!! You are Normal"
+        
+    }
+        
+    else{
+        return "Your BMI score is \(displaybmi). Oops!!! You are underweight"
+    }
+    
+}
+
+print(bmiCalculator(weight: 65, height: 1.7))
+
